@@ -1,0 +1,15 @@
+<h1>FrontEnd#index</h1>
+
+<% @types.each do |type| %>
+    <p><%= type.title %></p>
+    <ul>
+    <% type.apps.each do |app| %>
+        <li><%= app.title %></li>
+          <ul>
+            <% app.comments.each do |comment| %>
+                <li><%= comment.comment %></li>
+            <% end %>
+          </ul>
+    <% end %>
+    </ul>
+<% end %>

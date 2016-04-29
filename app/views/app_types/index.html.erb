@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing App Types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @app_types.each do |app_type| %>
+      <tr>
+        <td><%= app_type.title %></td>
+        <td><%= link_to 'Show', app_type %></td>
+        <td><%= link_to 'Edit', edit_app_type_path(app_type) %></td>
+        <td><%= link_to 'Destroy', app_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New App type', new_app_type_path %>

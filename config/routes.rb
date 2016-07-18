@@ -1,13 +1,17 @@
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   resources :comments
-
-  resources :app_types
 
   get 'front_end/index'
 
-  resources :apps
-
   root 'front_end#index'
+
+  get '/category/:title', to: 'category#show', as: 'category'
+
+  resources :websites do
+    collection { post :search, to: 'front_end#index' }
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,6 +1,8 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
 
+  helper_method :count
+
   # GET /comments
   # GET /comments.json
   def index

@@ -1,15 +1,10 @@
-<h1>FrontEnd#index</h1>
+<br/>
+<br/>
 
-<% @types.each do |type| %>
-    <p><%= type.title %></p>
-    <ul>
-    <% type.apps.each do |app| %>
-        <li><%= app.title %></li>
-          <ul>
-            <% app.comments.each do |comment| %>
-                <li><%= comment.comment %></li>
-            <% end %>
-          </ul>
-    <% end %>
-    </ul>
-<% end %>
+<h4><%= @site.title %></h4>
+<p>Адрес: <a href="<%= @site.url %>"><%= @site.url %></a></p>
+<%= image_tag @site.image.url(:medium) %>
+<hr/>
+<p>
+  <%= @site.description %>
+</p>

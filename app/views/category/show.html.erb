@@ -1,0 +1,20 @@
+<h3 class="page-header">
+  <%= @category.title %>
+</h3>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Название</th>
+    <th>Ссылка</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @category.websites.each do |site| %>
+      <tr>
+        <td><%= site.title %></td>
+        <td><%= site.url %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

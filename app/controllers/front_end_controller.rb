@@ -1,8 +1,6 @@
 class FrontEndController < ApplicationController
   def index
-    maxId = Website.maximum('id')
-    minId = Website.minimum('id')
-
-    @site = Website.find(rand(minId .. maxId))
+    count = Website.count
+    @site = Website.offset(rand(count)).first
   end
 end

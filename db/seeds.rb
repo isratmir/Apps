@@ -6,7 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 #AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
-
 =begin
 sites = ActiveSupport::JSON.decode(File.read('db/seeds/websites.json'))
 
@@ -14,8 +13,8 @@ sites.each do |site|
   Website.create!(title: site['title'], url: site['url'], description: site['description'], keywords: site['keywords'])
 end
 
-Category.create(
-    [
+
+cats = [
         {title: "Государство"},
         {title: "Новости"},
         {title: "Хостинг"},
@@ -32,6 +31,6 @@ Category.create(
         {title: "Аренда недвижимости"},
         {title: "Дети"}
     ]
-)
 
+cats.map {|i| Category.create(i) }
 =end

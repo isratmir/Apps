@@ -1,3 +1,17 @@
 // Place all the styles related to the FrontEnd controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.promo{
+  margin: 100px auto 10px;
+  width: 400px;
+  border: 1px solid #e2e2e2;
+  border-radius: 3px;
+  padding: 15px;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.12);
+
+  img{
+    display: block;
+    margin: 0 auto;
+  }
+}

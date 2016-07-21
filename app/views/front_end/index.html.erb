@@ -1,10 +1,9 @@
-<br/>
-<br/>
-
-<h4><%= @site.title %></h4>
-<p>Адрес: <a href="<%= @site.url %>"><%= @site.url %></a></p>
-<%= image_tag @site.image.url(:medium) %>
-<hr/>
-<p>
-  <%= @site.description %>
-</p>
+<div class="promo">
+  <h4><%= @site.title %></h4>
+  <p>Адрес: <a href="<%= @site.url %>"><%= @site.url %></a></p>
+  <%= image_tag @site.image.url(:medium) %>
+  <hr/>
+  <p>
+    <%= @site.description %>
+  </p>
+</div>

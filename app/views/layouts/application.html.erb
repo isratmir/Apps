@@ -8,18 +8,6 @@
 </head>
 <body>
 
-<div class="header">
-  <div class="container">
-    <h1 class="page-header">Ресурсы кирнета <small><%= @current_path %></small></h1>
-
-    <ul class="list-inline">
-      <% menu.each do |item| %>
-          <li><%= link_to item.title, category_path(:title => item.title) %></li>
-      <% end %>
-    </ul>
-  </div>
-</div>
-
 <div class="container">
     <%= yield %>
 </div>

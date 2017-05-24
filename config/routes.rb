@@ -3,8 +3,6 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   resources :comments
 
-  get 'front_end/index'
-
   root 'front_end#index'
 
   get '/category/:title', to: 'category#show', as: 'category'

@@ -11,10 +11,15 @@
   </thead>
   <tbody>
   <% @category.websites.each do |site| %>
-      <tr>
-        <td><%= site.title %></td>
-        <td><%= site.url %></td>
-      </tr>
+    <div class="promo">
+      <h4><%= @site.title %></h4>
+      <p>Адрес: <a href="<%= @site.url %>" target="_blank"><%= @site.url %></a></p>
+      <%= image_tag @site.image.url(:medium) %>
+      <hr/>
+      <p>
+        <%= @site.description %>
+      </p>
+    </div>
   <% end %>
   </tbody>
 </table>

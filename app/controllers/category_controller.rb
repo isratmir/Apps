@@ -1,6 +1,6 @@
 class CategoryController < ApplicationController
 
   def show
-    @category = Category.find_by title: params[:title]
+    @category = Category.friendly.find_by slug: params[:slug]
   end
 end

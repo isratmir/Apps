@@ -2,24 +2,14 @@
   <%= @category.title %>
 </h3>
 
-<table class="table table-striped">
-  <thead>
-  <tr>
-    <th>Название</th>
-    <th>Ссылка</th>
-  </tr>
-  </thead>
-  <tbody>
-  <% @category.websites.each do |site| %>
-    <div class="promo">
-      <h4><%= @site.title %></h4>
-      <p>Адрес: <a href="<%= @site.url %>" target="_blank"><%= @site.url %></a></p>
-      <%= image_tag @site.image.url(:medium) %>
-      <hr/>
-      <p>
-        <%= @site.description %>
-      </p>
-    </div>
-  <% end %>
-  </tbody>
-</table>
+<% @category.websites.each do |site| %>
+  <div class="promo">
+    <h4><%= site.title %></h4>
+    <p>Адрес: <a href="<%= site.url %>" target="_blank"><%= site.url %></a></p>
+    <%= image_tag site.image.url(:medium) %>
+    <hr/>
+    <p>
+      <%= site.description %>
+    </p>
+  </div>
+<% end %>

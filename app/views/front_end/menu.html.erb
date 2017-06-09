@@ -1,0 +1,7 @@
+<div class="container">
+  <ul class="list-inline">
+    <% @categories.each do |cat| %>
+      <li><%= link_to cat.title, category_path(:slug => cat.slug), { :class => 'btn btn-link'} %></li>
+    <% end %>
+  </ul>
+</div>

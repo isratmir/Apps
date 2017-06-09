@@ -13,6 +13,6 @@ ActiveAdmin.register Category do
 #   permitted
 # end
 
-  permit_params :title, :slug
+  permit_params :title
 
 end
